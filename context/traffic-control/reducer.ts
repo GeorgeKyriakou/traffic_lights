@@ -18,7 +18,12 @@ export default (state: LightsCycleInterface, action: any) => {
                 current_index: state.current_index + 1
             };
         }
-
+        case trafficLightActions.RESET_INDEX: { 
+            return {
+                ...state,
+                current_index: 0
+            };
+        }
         default:
             return state;
     }

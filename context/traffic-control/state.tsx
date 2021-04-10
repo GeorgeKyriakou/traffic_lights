@@ -34,9 +34,15 @@ const LightsState = (props: any) => {
 
 
   const nextLightsState = (): void =>{
-    dispatch({
-      type: lightActions.NEXT_STATE
-    });
+    if(state.current_index === state.state_machine.length-1){
+      dispatch({
+        type: lightActions.RESET_INDEX
+      });
+    } else {
+      dispatch({
+        type: lightActions.NEXT_STATE
+      });
+    }
   }
 
 
