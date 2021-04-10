@@ -15,9 +15,7 @@ const Main: React.FC = () => {
     return (<>
         {state_machine.length && <MainStyle>
             <div className="main_wrapper">
-                <TrafficLight
-                    orchistrator={state_machine}
-                >
+                <TrafficLight lightId={1}>
                 </TrafficLight>
             </div>
         </MainStyle>}

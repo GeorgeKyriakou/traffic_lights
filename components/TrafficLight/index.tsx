@@ -1,34 +1,27 @@
 import React, { useContext, useEffect, useState } from 'react'
 import LightsCycleContext from '../../context/traffic-control/context';
-import { ILightOrchistrator } from '../../models/Orchistrator';
 import { TrafficLightStyle } from './style';
 
 interface Props {
-    orchistrator: ILightOrchistrator[]
+    lightId: number;
 }
 
-const TrafficLight: React.FC<Props> = ({ orchistrator }) => {
-    const { current_index, nextLightsState  } = useContext(LightsCycleContext)
-    const [currentLights, setCurrentLights] = useState(orchistrator[0])
-
-    const tick = setInterval(()=>{
-        nextLightsState()
-        setCurrentLights(orchistrator[current_index])
-        if (current_index === orchistrator.length - 1) {
-            clearInterval(tick);    
+const TrafficLight: React.FC<Props> = ({lightId}) => {
+    const { current_index, nextLightsState, state_machine  } = useContext(LightsCycleContext)
+   
+    useEffect(() => {
+        if(current_index !== state_machine.length - 1){
+            setTimeout(nextLightsState, 2000)
         }
-    }, 2000)
+    }, [current_index])
     
-
-
     return (
         <TrafficLightStyle>
-            <h1>Light 1</h1>
-            {console.log({currentLights})}
+            <h1>Light {lightId}</h1>
             <div className="lights-box">
-                <div className={`${currentLights.red && 'red'} light`}></div>
-                <div className={`${currentLights.yellow && 'yellow'} light`}></div>
-                <div className={`${currentLights.green && 'green'} light`}></div>
+                <div className={`${state_machine[current_index].red && 'red'} light`}></div>
+                <div className={`${state_machine[current_index].yellow && 'yellow'} light`}></div>
+                <div className={`${state_machine[current_index].green && 'green'} light`}></div>
             </div>
         </TrafficLightStyle>
     );
