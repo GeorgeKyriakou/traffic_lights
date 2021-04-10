@@ -3,27 +3,32 @@
         {
             "red": false,
             "yellow": false,
-            "green": true
+            "green": true,
+            "delay_ms": 1000
         },
         {
             "red": false,
             "yellow": true,
-            "green": false
+            "green": false,
+            "delay_ms": 1000
         },
         {
             "red": true,
             "yellow": false,
-            "green": false
+            "green": false,
+            "delay_ms": 3000
         },
         {
             "red": true,
             "yellow": true,
-            "green": false
+            "green": false,
+            "delay_ms": 1000
         },
         {
             "red": false,
             "yellow": false,
-            "green": true
+            "green": true,
+            "delay_ms": 1000
         }
     ]
 }

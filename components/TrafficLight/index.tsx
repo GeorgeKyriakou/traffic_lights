@@ -6,15 +6,15 @@ interface Props {
     lightId: number;
 }
 
-const TrafficLight: React.FC<Props> = ({lightId}) => {
-    const { current_index, nextLightsState, state_machine  } = useContext(LightsCycleContext)
-   
+const TrafficLight: React.FC<Props> = ({ lightId }) => {
+    const { current_index, nextLightsState, state_machine } = useContext(LightsCycleContext)
+
     useEffect(() => {
-        if(current_index !== state_machine.length - 1){
-            setTimeout(nextLightsState, 2000)
+        if (current_index !== state_machine.length - 1) {
+            setTimeout(nextLightsState, state_machine[current_index].delay_ms)
         }
     }, [current_index])
-    
+
     return (
         <TrafficLightStyle>
             <h1>Light {lightId}</h1>
