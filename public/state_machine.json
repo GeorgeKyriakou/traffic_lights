@@ -1,0 +1,29 @@
+{
+    "cycles": [
+        {
+            "red": false,
+            "yellow": false,
+            "green": true
+        },
+        {
+            "red": false,
+            "yellow": true,
+            "green": false
+        },
+        {
+            "red": true,
+            "yellow": false,
+            "green": false
+        },
+        {
+            "red": true,
+            "yellow": true,
+            "green": false
+        },
+        {
+            "red": false,
+            "yellow": false,
+            "green": true
+        }
+    ]
+}
