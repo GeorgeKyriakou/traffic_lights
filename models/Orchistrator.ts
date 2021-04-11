@@ -1,6 +1,6 @@
 export interface ILightOrchistrator {
- red: Boolean;   
- yellow: Boolean;   
- green: Boolean;   
+ r: Boolean;   
+ y: Boolean;   
+ g: Boolean;   
  delay_ms: number;
 }

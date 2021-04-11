@@ -4,7 +4,6 @@ import lightsReducer from "./reducer";
 import * as lightActions from "./actions";
 import { LightsCycleInterface } from "./model";
 import LightsCycleContext from "./context";
-import { ILightOrchistrator } from "../../models/Orchistrator";
 
 const LightsState = (props: any) => {
   const initialState: LightsCycleInterface = {

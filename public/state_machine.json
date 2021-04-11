@@ -1,34 +1,28 @@
 {
     "cycles": [
-        {
-            "red": false,
-            "yellow": false,
-            "green": true,
-            "delay_ms": 1000
+         {
+             "1": { "r": false,"y": false,"g": true },
+             "2": { "r": true,"y": false,"g": false }
+         },
+         {
+            "1": { "r": false,"y": true,"g": false },
+            "2": { "r": true,"y": false,"g": false }
         },
         {
-            "red": false,
-            "yellow": true,
-            "green": false,
-            "delay_ms": 1000
+            "1": { "r": true,"y": false,"g": false },
+            "2": { "r": true,"y": true,"g": false }
         },
         {
-            "red": true,
-            "yellow": false,
-            "green": false,
-            "delay_ms": 3000
+            "1": { "r": true,"y": false,"g": false },
+            "2": { "r": false,"y": false,"g": true }
         },
         {
-            "red": true,
-            "yellow": true,
-            "green": false,
-            "delay_ms": 1000
+            "1": { "r": true,"y": false,"g": false },
+            "2": { "r": false,"y": true,"g": false }
         },
         {
-            "red": false,
-            "yellow": false,
-            "green": true,
-            "delay_ms": 1000
-        }
+            "1": { "r": true,"y": true,"g": false },
+            "2": { "r": true,"y": false,"g": false }
+        } 
     ]
 }
