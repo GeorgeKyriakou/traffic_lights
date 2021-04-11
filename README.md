@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+**Author**: [@finnhodgkin](https://github.com/finnhodgkin)
 
-## Getting Started
+**Maintainer**: [@finnhodgkin](https://github.com/finnhodgkin)  
 
-First, run the development server:
+# Traffic light callback challenge:vertical_traffic_light:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+![traffic light gif](https://user-images.githubusercontent.com/22300773/27510355-77a53678-5906-11e7-8215-845f9c987e09.gif)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Description
+This is my solution for the traffic lights excercise, using Next.js, React with Typescript and with the help of the context API.
+Each part described in the [task](##Task) section describes a different requirement for the excercise. The solutions for those parts are found in separate branches in this repo, named accordingly. 
+Solutions:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+* [Part 1](https://github.com/GeorgeKyriakou/traffic_lights/tree/part-1) 
+* [Part 2](https://github.com/GeorgeKyriakou/traffic_lights/tree/part-2)
+* [Part 3](https://github.com/GeorgeKyriakou/traffic_lights/tree/part-3)
+* [Part 4](https://github.com/GeorgeKyriakou/traffic_lights/tree/part-4)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Task
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Your task is to replicate the traffic lights shown above.  Hopefully the instructional comments will speak for
+themselves.
 
-## Learn More
+### Part 1:
 
-To learn more about Next.js, take a look at the following resources:
+Light up the first traffic light in the following order:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
++ :green_apple: green
++ :sun_with_face: yellow
++ :red_circle: red
++ :red_circle::sun_with_face: red & yellow
++ :green_apple: green
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Part 2:
 
-## Deploy on Vercel
+Display the red light for longer:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
++ :green_apple: green
++ :sun_with_face: yellow
++ :red_circle: red (3 seconds)
++ :red_circle::sun_with_face: red & yellow
++ :green_apple: green
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Part 3:
+
+Loop the light so it plays forever.
+
+> Hint: recursion worked for me...
+
+### Part 4:
+
+Loop the second light with the following rules:
+
++ Green should show only when the other light is red.
++ When transitioning from green to red, show yellow.
++ If the other light is green or yellow, show red.
++ When transitioning from red to green show yellow and red simultaneously.
+
+:vertical_traffic_light: If successful you should see something like the
+gif above. :tada:
+
+### Solutions:
+
+Check out the two solution branches (solution and solution-fun) for two complete examples
